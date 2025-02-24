@@ -19,18 +19,17 @@ from django.contrib import admin
 from django.urls import include, path
 from drf_yasg import openapi
 from drf_yasg.views import get_schema_view
-from rest_framework.permissions import AllowAny
+from rest_framework import permissions
 
 schema_view = get_schema_view(
     openapi.Info(
         title="Formaloo API",
         default_version="v1",
-        description="API documentation for Formaloo",
+        description="Appstore API description",
     ),
     public=True,
-    permission_classes=[AllowAny],
+    permission_classes=(permissions.AllowAny,),
 )
-
 
 urlpatterns = [
     path("admin/", admin.site.urls),
