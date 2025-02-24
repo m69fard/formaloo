@@ -1,8 +1,9 @@
 from django.urls import include, path
 from rest_framework import routers
 
-from .views import AppCreateAPIView
+from .views import AppListCreateAPIView, PurchaseAPIView
 
 urlpatterns = [
-    path("apps", AppCreateAPIView.as_view(), name="app-create"),
+    path("apps", AppListCreateAPIView.as_view(), name="app-list-create"),
+    path("purchase", PurchaseAPIView.as_view(), name="purchase"),
 ]

@@ -1,5 +1,5 @@
 """
-WSGI config for Formaloo project.
+WSGI config for Appstore project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 

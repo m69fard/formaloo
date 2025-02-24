@@ -1,5 +1,5 @@
 """
-URL configuration for Formaloo project.
+URL configuration for Appstore project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.1/topics/http/urls/
@@ -23,9 +23,9 @@ from rest_framework.permissions import AllowAny
 
 schema_view = get_schema_view(
     openapi.Info(
-        title="Formaloo API",
+        title="Appstore API",
         default_version="v1",
-        description="API documentation for Formaloo",
+        description="API documentation for Appstore",
     ),
     public=True,
     permission_classes=[AllowAny],
@@ -36,5 +36,6 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("api/", include("apps.api_urls")),
     # Swagger Documentation
-    path("doc/", schema_view.with_ui("swagger", cache_timeout=0), name="schema-swagger-ui"),
+    path("swagger/", schema_view.with_ui("swagger", cache_timeout=0), name="schema-swagger-ui"),
+    path("redoc/", schema_view.with_ui("redoc", cache_timeout=0), name="schema-redoc"),
 ]
