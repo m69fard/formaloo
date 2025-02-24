@@ -37,7 +37,7 @@ This is a Django-based Appstore service that allows users to create and sell app
 
 3. Start the services:
    ```sh
-   docker-compose up --build
+   docker compose up --build -d
    ```
 
 4. The application will be available at `http://localhost:8000`
@@ -45,19 +45,19 @@ This is a Django-based Appstore service that allows users to create and sell app
 ### Database Setup & Migrations
 The database is automatically configured in Docker. However, to run migrations manually:
 ```sh
-docker-compose exec web python manage.py migrate
+docker compose exec web python manage.py migrate
 ```
 
 ### Creating a Superuser
 To create a superuser:
 ```sh
-docker-compose exec web python manage.py createsuperuser
+docker compose exec web python manage.py createsuperuser
 ```
 
 ### Test
 To run tests
 ```sh
-docker-compose exec web python manage.py test
+docker compose exec web python manage.py test
 ```
 
 
