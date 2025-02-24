@@ -12,4 +12,4 @@ class AppAdmin(admin.ModelAdmin):
     def verify_apps(self, request, queryset):
         queryset.update(status="verified")
 
-    verify_apps.short_description = "Mark selected apps as verified"
+    verify_apps.short_description = "Verify selected apps"

@@ -1,5 +1,5 @@
 """
-ASGI Formaloo for Formaloo project.
+ASGI config for Appstore project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
